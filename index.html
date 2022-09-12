@@ -1,138 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>HW05082022</title>
-</head>
-<style>
-   @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+    <title>HW05082022</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap");
 
-  * {
-    box-sizing: border-box;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-  }
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
 
+    .header {
+      display: flex;
+      justify-content: center;
+    }
 
-  .header {
-    display: flex;
-    justify-content: center; 
-  }
+    .header__title {
+      font-family: Libre Bodoni, serif;
+      text-transform: uppercase;
+      font-size: 6.6rem;
+      font-weight: 400;
+      position: absolute;
+      text-align: center;
+      margin-top: 2rem;
+      z-index: 1;
+    }
 
+    .card {
+      width: 100%;
+      display: flex; /* поставить в ряд */
+      /* flex-wrap: wrap; */
+      justify-content: center; /* поставить по центру */
+      padding: 15px;
+      gap: 7rem; /* ширина между колонками */
+    }
 
-  .header__title {
-    font-family: Libre Bodoni, serif;
-    text-transform: uppercase;
-    font-size: 6.6rem;
-    font-weight: 400;
-    position: absolute;
-   text-align: center;
-    margin-top: 2rem;
-    z-index: 1;
-  }
+    .card__items {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /*  width: 20%; */
+      padding: 5px;
+      margin-top: 6rem;
+    }
 
+    .card__items--average {
+      /* средняя колонка */
+      padding-top: 15px;
+    }
 
-  .card {
-    width: 100%;
-    display: flex; /* поставить в ряд */
-    /* flex-wrap: wrap; */
-    justify-content: center; /* поставить по центру */
-    padding: 15px;
-    gap: 7rem; /* ширина между колонками */
-  }
+    .card__img {
+      opacity: 0.7;
+      cursor: pointer;
+    }
 
+    .card__title {
+      font-size: 2rem;
+    }
 
-  .card__items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   /*  width: 20%; */
-    padding: 5px;
-    margin-top: 6rem;
-  }
+    .card__text {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      color: grey;
+    }
 
+    .card__link {
+      color: rgb(31, 30, 30);
+      font-weight: 700;
+      align-items: baseline;
+    }
+    .card__link:hover {
+      /*  тень на ссылки  */
+      transform: scaleX(0.9);
+      color: rgb(61, 5, 5);
+    }
+  </style>
 
-  .card__items--average {
-    /* средняя колонка */
-    padding-top: 15px;
-  }
-
-
-  .card__img {
-    opacity: 0.7;
-    cursor: pointer;
-  }
-
- 
-  .card__title {
-    font-size: 2rem;
-  }
-
-
-  .card__text {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: grey;
-  }
-
-
-  .card__link {
-    color: rgb(31, 30, 30);
-    font-weight: 700;
-    align-items:baseline;
-    
-  
-  }
-  .card__link:hover {
-   /*  тень на ссылки  */
-    transform:scaleX(0.90);
-    color: rgb(61, 5, 5);
-
-  }
-</style>
-
-<body>
-  <div class="header">
-    <h1 class="header__title">travel <br>experience</h1>
-
-  </div>
-  <div class="card">
-    <div class="card__items">
-      <img class="card__img" src="./img/img1.JPG" alt="">
-      <h2 class="card__title">01/</h2>
-      <p class="card__text">The open sea, the salty breeze, the<br>
-        warm sun. We love trawel as much as<br>
-        you do, so let's plan your next trip<br>
-        together</p>
-      <a class="card__link" href="#">Read more<i class="las la-arrow-right"></i></a>
+  <body>
+    <div class="header">
+      <h1 class="header__title">travel <br />experience</h1>
     </div>
-    <div class="card__items card__items--average">
-      <img class="card__img" src="./img/img2.JPG" alt="">
-      <h2 class="card__title">02/</h2>
-      <p class="card__text">The open sea, the salty breeze, the<br>
-        warm sun. We love trawel as much as<br>
-        you do, so let's plan your next trip<br>
-        together</p>
-      <a class="card__link" href="#">Read more<i class="las la-arrow-right"></i></a>
+    <div class="card">
+      <div class="card__items">
+        <img class="card__img" src="./img/img1.JPG" alt="" />
+        <h2 class="card__title">01/</h2>
+        <p class="card__text">
+          The open sea, the salty breeze, the<br />
+          warm sun. We love trawel as much as<br />
+          you do, so let's plan your next trip<br />
+          together
+        </p>
+        <a class="card__link" href="#"
+          >Read more<i class="las la-arrow-right"></i
+        ></a>
+      </div>
+      <div class="card__items card__items--average">
+        <img class="card__img" src="./img/img2.JPG" alt="" />
+        <h2 class="card__title">02/</h2>
+        <p class="card__text">
+          The open sea, the salty breeze, the<br />
+          warm sun. We love trawel as much as<br />
+          you do, so let's plan your next trip<br />
+          together
+        </p>
+        <a class="card__link" href="#"
+          >Read more<i class="las la-arrow-right"></i
+        ></a>
+      </div>
+      <div class="card__items">
+        <img class="card__img" src="./img/img3.JPG" alt="" />
+        <h2 class="card__title">03/</h2>
+        <p class="card__text">
+          The open sea, the salty breeze, the<br />
+          warm sun. We love trawel as much as<br />
+          you do, so let's plan your next trip<br />
+          together
+        </p>
+        <a class="card__link" href="#"
+          >Read more<i class="las la-arrow-right"></i
+        ></a>
+      </div>
     </div>
-    <div class="card__items">
-      <img class="card__img" src="./img/img3.JPG" alt="">
-      <h2 class="card__title">03/</h2>
-      <p class="card__text">The open sea, the salty breeze, the<br>
-        warm sun. We love trawel as much as<br>
-        you do, so let's plan your next trip<br>
-        together</p>
-      <a class="card__link" href="#">Read more<i class="las la-arrow-right"></i></a>
-    </div>
-  </div>
-
-</body>
-
+  </body>
 </html>
